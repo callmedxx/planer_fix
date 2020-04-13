@@ -1,0 +1,287 @@
+graph(%0 : Float(1, 3, 512, 512),
+      %conv1.weight : Float(64, 3, 7, 7),
+      %conv1.bias : Float(64),
+      %bn1.weight : Float(64),
+      %bn1.bias : Float(64),
+      %bn1.running_mean : Float(64),
+      %bn1.running_var : Float(64),
+      %bn1.num_batches_tracked : Long(),
+      %layer1.0.conv1.weight : Float(64, 64, 3, 3),
+      %layer1.0.conv1.bias : Float(64),
+      %layer1.0.bn1.weight : Float(64),
+      %layer1.0.bn1.bias : Float(64),
+      %layer1.0.bn1.running_mean : Float(64),
+      %layer1.0.bn1.running_var : Float(64),
+      %layer1.0.bn1.num_batches_tracked : Long(),
+      %layer1.0.conv2.weight : Float(64, 64, 3, 3),
+      %layer1.0.conv2.bias : Float(64),
+      %layer1.0.bn2.weight : Float(64),
+      %layer1.0.bn2.bias : Float(64),
+      %layer1.0.bn2.running_mean : Float(64),
+      %layer1.0.bn2.running_var : Float(64),
+      %layer1.0.bn2.num_batches_tracked : Long(),
+      %layer1.1.conv1.weight : Float(64, 64, 3, 3),
+      %layer1.1.conv1.bias : Float(64),
+      %layer1.1.bn1.weight : Float(64),
+      %layer1.1.bn1.bias : Float(64),
+      %layer1.1.bn1.running_mean : Float(64),
+      %layer1.1.bn1.running_var : Float(64),
+      %layer1.1.bn1.num_batches_tracked : Long(),
+      %layer1.1.conv2.weight : Float(64, 64, 3, 3),
+      %layer1.1.conv2.bias : Float(64),
+      %layer1.1.bn2.weight : Float(64),
+      %layer1.1.bn2.bias : Float(64),
+      %layer1.1.bn2.running_mean : Float(64),
+      %layer1.1.bn2.running_var : Float(64),
+      %layer1.1.bn2.num_batches_tracked : Long(),
+      %layer2.0.conv1.weight : Float(128, 64, 3, 3),
+      %layer2.0.conv1.bias : Float(128),
+      %layer2.0.bn1.weight : Float(128),
+      %layer2.0.bn1.bias : Float(128),
+      %layer2.0.bn1.running_mean : Float(128),
+      %layer2.0.bn1.running_var : Float(128),
+      %layer2.0.bn1.num_batches_tracked : Long(),
+      %layer2.0.conv2.weight : Float(128, 128, 3, 3),
+      %layer2.0.conv2.bias : Float(128),
+      %layer2.0.bn2.weight : Float(128),
+      %layer2.0.bn2.bias : Float(128),
+      %layer2.0.bn2.running_mean : Float(128),
+      %layer2.0.bn2.running_var : Float(128),
+      %layer2.0.bn2.num_batches_tracked : Long(),
+      %layer2.0.downsample.0.weight : Float(128, 64, 1, 1),
+      %layer2.0.downsample.0.bias : Float(128),
+      %layer2.0.downsample.1.weight : Float(128),
+      %layer2.0.downsample.1.bias : Float(128),
+      %layer2.0.downsample.1.running_mean : Float(128),
+      %layer2.0.downsample.1.running_var : Float(128),
+      %layer2.0.downsample.1.num_batches_tracked : Long(),
+      %layer2.1.conv1.weight : Float(128, 128, 3, 3),
+      %layer2.1.conv1.bias : Float(128),
+      %layer2.1.bn1.weight : Float(128),
+      %layer2.1.bn1.bias : Float(128),
+      %layer2.1.bn1.running_mean : Float(128),
+      %layer2.1.bn1.running_var : Float(128),
+      %layer2.1.bn1.num_batches_tracked : Long(),
+      %layer2.1.conv2.weight : Float(128, 128, 3, 3),
+      %layer2.1.conv2.bias : Float(128),
+      %layer2.1.bn2.weight : Float(128),
+      %layer2.1.bn2.bias : Float(128),
+      %layer2.1.bn2.running_mean : Float(128),
+      %layer2.1.bn2.running_var : Float(128),
+      %layer2.1.bn2.num_batches_tracked : Long(),
+      %layer3.0.conv1.weight : Float(256, 128, 3, 3),
+      %layer3.0.conv1.bias : Float(256),
+      %layer3.0.bn1.weight : Float(256),
+      %layer3.0.bn1.bias : Float(256),
+      %layer3.0.bn1.running_mean : Float(256),
+      %layer3.0.bn1.running_var : Float(256),
+      %layer3.0.bn1.num_batches_tracked : Long(),
+      %layer3.0.conv2.weight : Float(256, 256, 3, 3),
+      %layer3.0.conv2.bias : Float(256),
+      %layer3.0.bn2.weight : Float(256),
+      %layer3.0.bn2.bias : Float(256),
+      %layer3.0.bn2.running_mean : Float(256),
+      %layer3.0.bn2.running_var : Float(256),
+      %layer3.0.bn2.num_batches_tracked : Long(),
+      %layer3.0.downsample.0.weight : Float(256, 128, 1, 1),
+      %layer3.0.downsample.0.bias : Float(256),
+      %layer3.0.downsample.1.weight : Float(256),
+      %layer3.0.downsample.1.bias : Float(256),
+      %layer3.0.downsample.1.running_mean : Float(256),
+      %layer3.0.downsample.1.running_var : Float(256),
+      %layer3.0.downsample.1.num_batches_tracked : Long(),
+      %layer3.1.conv1.weight : Float(256, 256, 3, 3),
+      %layer3.1.conv1.bias : Float(256),
+      %layer3.1.bn1.weight : Float(256),
+      %layer3.1.bn1.bias : Float(256),
+      %layer3.1.bn1.running_mean : Float(256),
+      %layer3.1.bn1.running_var : Float(256),
+      %layer3.1.bn1.num_batches_tracked : Long(),
+      %layer3.1.conv2.weight : Float(256, 256, 3, 3),
+      %layer3.1.conv2.bias : Float(256),
+      %layer3.1.bn2.weight : Float(256),
+      %layer3.1.bn2.bias : Float(256),
+      %layer3.1.bn2.running_mean : Float(256),
+      %layer3.1.bn2.running_var : Float(256),
+      %layer3.1.bn2.num_batches_tracked : Long(),
+      %layer4.0.conv1.weight : Float(512, 256, 3, 3),
+      %layer4.0.conv1.bias : Float(512),
+      %layer4.0.bn1.weight : Float(512),
+      %layer4.0.bn1.bias : Float(512),
+      %layer4.0.bn1.running_mean : Float(512),
+      %layer4.0.bn1.running_var : Float(512),
+      %layer4.0.bn1.num_batches_tracked : Long(),
+      %layer4.0.conv2.weight : Float(512, 512, 3, 3),
+      %layer4.0.conv2.bias : Float(512),
+      %layer4.0.bn2.weight : Float(512),
+      %layer4.0.bn2.bias : Float(512),
+      %layer4.0.bn2.running_mean : Float(512),
+      %layer4.0.bn2.running_var : Float(512),
+      %layer4.0.bn2.num_batches_tracked : Long(),
+      %layer4.0.downsample.0.weight : Float(512, 256, 1, 1),
+      %layer4.0.downsample.0.bias : Float(512),
+      %layer4.0.downsample.1.weight : Float(512),
+      %layer4.0.downsample.1.bias : Float(512),
+      %layer4.0.downsample.1.running_mean : Float(512),
+      %layer4.0.downsample.1.running_var : Float(512),
+      %layer4.0.downsample.1.num_batches_tracked : Long(),
+      %layer4.1.conv1.weight : Float(512, 512, 3, 3),
+      %layer4.1.conv1.bias : Float(512),
+      %layer4.1.bn1.weight : Float(512),
+      %layer4.1.bn1.bias : Float(512),
+      %layer4.1.bn1.running_mean : Float(512),
+      %layer4.1.bn1.running_var : Float(512),
+      %layer4.1.bn1.num_batches_tracked : Long(),
+      %layer4.1.conv2.weight : Float(512, 512, 3, 3),
+      %layer4.1.conv2.bias : Float(512),
+      %layer4.1.bn2.weight : Float(512),
+      %layer4.1.bn2.bias : Float(512),
+      %layer4.1.bn2.running_mean : Float(512),
+      %layer4.1.bn2.running_var : Float(512),
+      %layer4.1.bn2.num_batches_tracked : Long(),
+      %deconv1.0.weight : Float(256, 512, 1, 1),
+      %deconv1.0.bias : Float(256),
+      %deconv1.1.weight : Float(256),
+      %deconv1.1.bias : Float(256),
+      %deconv1.1.running_mean : Float(256),
+      %deconv1.1.running_var : Float(256),
+      %deconv1.1.num_batches_tracked : Long(),
+      %deconv2.0.weight : Float(256, 256, 1, 1),
+      %deconv2.0.bias : Float(256),
+      %deconv2.1.weight : Float(256),
+      %deconv2.1.bias : Float(256),
+      %deconv2.1.running_mean : Float(256),
+      %deconv2.1.running_var : Float(256),
+      %deconv2.1.num_batches_tracked : Long(),
+      %deconv3.0.weight : Float(256, 256, 1, 1),
+      %deconv3.0.bias : Float(256),
+      %deconv3.1.weight : Float(256),
+      %deconv3.1.bias : Float(256),
+      %deconv3.1.running_mean : Float(256),
+      %deconv3.1.running_var : Float(256),
+      %deconv3.1.num_batches_tracked : Long(),
+      %hm.0.weight : Float(64, 256, 3, 3),
+      %hm.0.bias : Float(64),
+      %hm.2.weight : Float(1, 64, 1, 1),
+      %hm.2.bias : Float(1),
+      %hm_hp.0.weight : Float(64, 256, 3, 3),
+      %hm_hp.0.bias : Float(64),
+      %hm_hp.2.weight : Float(17, 64, 1, 1),
+      %hm_hp.2.bias : Float(17),
+      %hp_offset.0.weight : Float(64, 256, 3, 3),
+      %hp_offset.0.bias : Float(64),
+      %hp_offset.2.weight : Float(2, 64, 1, 1),
+      %hp_offset.2.bias : Float(2),
+      %hps.0.weight : Float(64, 256, 3, 3),
+      %hps.0.bias : Float(64),
+      %hps.2.weight : Float(34, 64, 1, 1),
+      %hps.2.bias : Float(34),
+      %reg.0.weight : Float(64, 256, 3, 3),
+      %reg.0.bias : Float(64),
+      %reg.2.weight : Float(2, 64, 1, 1),
+      %reg.2.bias : Float(2),
+      %wh.0.weight : Float(64, 256, 3, 3),
+      %wh.0.bias : Float(64),
+      %wh.2.weight : Float(2, 64, 1, 1),
+      %wh.2.bias : Float(2)):
+  %186 : Float(1, 64, 256, 256) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[7, 7], pads=[3, 3, 3, 3], strides=[2, 2]](%0, %conv1.weight, %conv1.bias), scope: PoseResNet/Conv2d[conv1]
+  %187 : Float(1, 64, 256, 256) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%186, %bn1.weight, %bn1.bias, %bn1.running_mean, %bn1.running_var), scope: PoseResNet/BatchNorm2d[bn1]
+  %188 : Float(1, 64, 256, 256) = onnx::Relu(%187), scope: PoseResNet/ReLU[relu]
+  %189 : Float(1, 64, 128, 128) = onnx::MaxPool[kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%188), scope: PoseResNet/MaxPool2d[maxpool]
+  %190 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%189, %layer1.0.conv1.weight, %layer1.0.conv1.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/Conv2d[conv1]
+  %191 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%190, %layer1.0.bn1.weight, %layer1.0.bn1.bias, %layer1.0.bn1.running_mean, %layer1.0.bn1.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/BatchNorm2d[bn1]
+  %192 : Float(1, 64, 128, 128) = onnx::Relu(%191), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/ReLU[relu]
+  %193 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%192, %layer1.0.conv2.weight, %layer1.0.conv2.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/Conv2d[conv2]
+  %194 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%193, %layer1.0.bn2.weight, %layer1.0.bn2.bias, %layer1.0.bn2.running_mean, %layer1.0.bn2.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/BatchNorm2d[bn2]
+  %195 : Float(1, 64, 128, 128) = onnx::Add(%194, %189), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]
+  %196 : Float(1, 64, 128, 128) = onnx::Relu(%195), scope: PoseResNet/Sequential[layer1]/BasicBlock[0]/ReLU[relu]
+  %197 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%196, %layer1.1.conv1.weight, %layer1.1.conv1.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/Conv2d[conv1]
+  %198 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%197, %layer1.1.bn1.weight, %layer1.1.bn1.bias, %layer1.1.bn1.running_mean, %layer1.1.bn1.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/BatchNorm2d[bn1]
+  %199 : Float(1, 64, 128, 128) = onnx::Relu(%198), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/ReLU[relu]
+  %200 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%199, %layer1.1.conv2.weight, %layer1.1.conv2.bias), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/Conv2d[conv2]
+  %201 : Float(1, 64, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%200, %layer1.1.bn2.weight, %layer1.1.bn2.bias, %layer1.1.bn2.running_mean, %layer1.1.bn2.running_var), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/BatchNorm2d[bn2]
+  %202 : Float(1, 64, 128, 128) = onnx::Add(%201, %196), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]
+  %203 : Float(1, 64, 128, 128) = onnx::Relu(%202), scope: PoseResNet/Sequential[layer1]/BasicBlock[1]/ReLU[relu]
+  %204 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%203, %layer2.0.conv1.weight, %layer2.0.conv1.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Conv2d[conv1]
+  %205 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%204, %layer2.0.bn1.weight, %layer2.0.bn1.bias, %layer2.0.bn1.running_mean, %layer2.0.bn1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/BatchNorm2d[bn1]
+  %206 : Float(1, 128, 64, 64) = onnx::Relu(%205), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/ReLU[relu]
+  %207 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%206, %layer2.0.conv2.weight, %layer2.0.conv2.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Conv2d[conv2]
+  %208 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%207, %layer2.0.bn2.weight, %layer2.0.bn2.bias, %layer2.0.bn2.running_mean, %layer2.0.bn2.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/BatchNorm2d[bn2]
+  %209 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%203, %layer2.0.downsample.0.weight, %layer2.0.downsample.0.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Sequential[downsample]/Conv2d[0]
+  %210 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%209, %layer2.0.downsample.1.weight, %layer2.0.downsample.1.bias, %layer2.0.downsample.1.running_mean, %layer2.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1]
+  %211 : Float(1, 128, 64, 64) = onnx::Add(%208, %210), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]
+  %212 : Float(1, 128, 64, 64) = onnx::Relu(%211), scope: PoseResNet/Sequential[layer2]/BasicBlock[0]/ReLU[relu]
+  %213 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%212, %layer2.1.conv1.weight, %layer2.1.conv1.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/Conv2d[conv1]
+  %214 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%213, %layer2.1.bn1.weight, %layer2.1.bn1.bias, %layer2.1.bn1.running_mean, %layer2.1.bn1.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/BatchNorm2d[bn1]
+  %215 : Float(1, 128, 64, 64) = onnx::Relu(%214), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/ReLU[relu]
+  %216 : Float(1, 128, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%215, %layer2.1.conv2.weight, %layer2.1.conv2.bias), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/Conv2d[conv2]
+  %217 : Float(1, 128, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%216, %layer2.1.bn2.weight, %layer2.1.bn2.bias, %layer2.1.bn2.running_mean, %layer2.1.bn2.running_var), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/BatchNorm2d[bn2]
+  %218 : Float(1, 128, 64, 64) = onnx::Add(%217, %212), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]
+  %219 : Float(1, 128, 64, 64) = onnx::Relu(%218), scope: PoseResNet/Sequential[layer2]/BasicBlock[1]/ReLU[relu]
+  %220 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%219, %layer3.0.conv1.weight, %layer3.0.conv1.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Conv2d[conv1]
+  %221 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%220, %layer3.0.bn1.weight, %layer3.0.bn1.bias, %layer3.0.bn1.running_mean, %layer3.0.bn1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/BatchNorm2d[bn1]
+  %222 : Float(1, 256, 32, 32) = onnx::Relu(%221), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/ReLU[relu]
+  %223 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%222, %layer3.0.conv2.weight, %layer3.0.conv2.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Conv2d[conv2]
+  %224 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%223, %layer3.0.bn2.weight, %layer3.0.bn2.bias, %layer3.0.bn2.running_mean, %layer3.0.bn2.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/BatchNorm2d[bn2]
+  %225 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%219, %layer3.0.downsample.0.weight, %layer3.0.downsample.0.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Sequential[downsample]/Conv2d[0]
+  %226 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%225, %layer3.0.downsample.1.weight, %layer3.0.downsample.1.bias, %layer3.0.downsample.1.running_mean, %layer3.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1]
+  %227 : Float(1, 256, 32, 32) = onnx::Add(%224, %226), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]
+  %228 : Float(1, 256, 32, 32) = onnx::Relu(%227), scope: PoseResNet/Sequential[layer3]/BasicBlock[0]/ReLU[relu]
+  %229 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%228, %layer3.1.conv1.weight, %layer3.1.conv1.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/Conv2d[conv1]
+  %230 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%229, %layer3.1.bn1.weight, %layer3.1.bn1.bias, %layer3.1.bn1.running_mean, %layer3.1.bn1.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/BatchNorm2d[bn1]
+  %231 : Float(1, 256, 32, 32) = onnx::Relu(%230), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/ReLU[relu]
+  %232 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%231, %layer3.1.conv2.weight, %layer3.1.conv2.bias), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/Conv2d[conv2]
+  %233 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%232, %layer3.1.bn2.weight, %layer3.1.bn2.bias, %layer3.1.bn2.running_mean, %layer3.1.bn2.running_var), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/BatchNorm2d[bn2]
+  %234 : Float(1, 256, 32, 32) = onnx::Add(%233, %228), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]
+  %235 : Float(1, 256, 32, 32) = onnx::Relu(%234), scope: PoseResNet/Sequential[layer3]/BasicBlock[1]/ReLU[relu]
+  %236 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%235, %layer4.0.conv1.weight, %layer4.0.conv1.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Conv2d[conv1]
+  %237 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%236, %layer4.0.bn1.weight, %layer4.0.bn1.bias, %layer4.0.bn1.running_mean, %layer4.0.bn1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/BatchNorm2d[bn1]
+  %238 : Float(1, 512, 16, 16) = onnx::Relu(%237), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/ReLU[relu]
+  %239 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%238, %layer4.0.conv2.weight, %layer4.0.conv2.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Conv2d[conv2]
+  %240 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%239, %layer4.0.bn2.weight, %layer4.0.bn2.bias, %layer4.0.bn2.running_mean, %layer4.0.bn2.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/BatchNorm2d[bn2]
+  %241 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%235, %layer4.0.downsample.0.weight, %layer4.0.downsample.0.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Sequential[downsample]/Conv2d[0]
+  %242 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%241, %layer4.0.downsample.1.weight, %layer4.0.downsample.1.bias, %layer4.0.downsample.1.running_mean, %layer4.0.downsample.1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/Sequential[downsample]/BatchNorm2d[1]
+  %243 : Float(1, 512, 16, 16) = onnx::Add(%240, %242), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]
+  %244 : Float(1, 512, 16, 16) = onnx::Relu(%243), scope: PoseResNet/Sequential[layer4]/BasicBlock[0]/ReLU[relu]
+  %245 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%244, %layer4.1.conv1.weight, %layer4.1.conv1.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/Conv2d[conv1]
+  %246 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%245, %layer4.1.bn1.weight, %layer4.1.bn1.bias, %layer4.1.bn1.running_mean, %layer4.1.bn1.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/BatchNorm2d[bn1]
+  %247 : Float(1, 512, 16, 16) = onnx::Relu(%246), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/ReLU[relu]
+  %248 : Float(1, 512, 16, 16) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%247, %layer4.1.conv2.weight, %layer4.1.conv2.bias), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/Conv2d[conv2]
+  %249 : Float(1, 512, 16, 16) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%248, %layer4.1.bn2.weight, %layer4.1.bn2.bias, %layer4.1.bn2.running_mean, %layer4.1.bn2.running_var), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/BatchNorm2d[bn2]
+  %250 : Float(1, 512, 16, 16) = onnx::Add(%249, %244), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]
+  %251 : Float(1, 512, 16, 16) = onnx::Relu(%250), scope: PoseResNet/Sequential[layer4]/BasicBlock[1]/ReLU[relu]
+  %252 : Tensor = onnx::Constant[value= 1  1  2  2 [ Variable[CPUType]{4} ]](), scope: PoseResNet
+  %253 : Float(1, 512, 32, 32) = onnx::Upsample[mode="linear"](%251, %252), scope: PoseResNet
+  %254 : Float(1, 256, 32, 32) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%253, %deconv1.0.weight, %deconv1.0.bias), scope: PoseResNet/Sequential[deconv1]/Conv2d[0]
+  %255 : Float(1, 256, 32, 32) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%254, %deconv1.1.weight, %deconv1.1.bias, %deconv1.1.running_mean, %deconv1.1.running_var), scope: PoseResNet/Sequential[deconv1]/BatchNorm2d[1]
+  %256 : Float(1, 256, 32, 32) = onnx::Relu(%255), scope: PoseResNet/Sequential[deconv1]/ReLU[2]
+  %257 : Tensor = onnx::Constant[value= 1  1  2  2 [ Variable[CPUType]{4} ]](), scope: PoseResNet
+  %258 : Float(1, 256, 64, 64) = onnx::Upsample[mode="linear"](%256, %257), scope: PoseResNet
+  %259 : Float(1, 256, 64, 64) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%258, %deconv2.0.weight, %deconv2.0.bias), scope: PoseResNet/Sequential[deconv2]/Conv2d[0]
+  %260 : Float(1, 256, 64, 64) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%259, %deconv2.1.weight, %deconv2.1.bias, %deconv2.1.running_mean, %deconv2.1.running_var), scope: PoseResNet/Sequential[deconv2]/BatchNorm2d[1]
+  %261 : Float(1, 256, 64, 64) = onnx::Relu(%260), scope: PoseResNet/Sequential[deconv2]/ReLU[2]
+  %262 : Tensor = onnx::Constant[value= 1  1  2  2 [ Variable[CPUType]{4} ]](), scope: PoseResNet
+  %263 : Float(1, 256, 128, 128) = onnx::Upsample[mode="linear"](%261, %262), scope: PoseResNet
+  %264 : Float(1, 256, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%263, %deconv3.0.weight, %deconv3.0.bias), scope: PoseResNet/Sequential[deconv3]/Conv2d[0]
+  %265 : Float(1, 256, 128, 128) = onnx::BatchNormalization[epsilon=1e-05, momentum=0.9](%264, %deconv3.1.weight, %deconv3.1.bias, %deconv3.1.running_mean, %deconv3.1.running_var), scope: PoseResNet/Sequential[deconv3]/BatchNorm2d[1]
+  %266 : Float(1, 256, 128, 128) = onnx::Relu(%265), scope: PoseResNet/Sequential[deconv3]/ReLU[2]
+  %267 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %hm.0.weight, %hm.0.bias), scope: PoseResNet/Sequential[hm]/Conv2d[0]
+  %268 : Float(1, 64, 128, 128) = onnx::Relu(%267), scope: PoseResNet/Sequential[hm]/ReLU[1]
+  %269 : Float(1, 1, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%268, %hm.2.weight, %hm.2.bias), scope: PoseResNet/Sequential[hm]/Conv2d[2]
+  %270 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %hm_hp.0.weight, %hm_hp.0.bias), scope: PoseResNet/Sequential[hm_hp]/Conv2d[0]
+  %271 : Float(1, 64, 128, 128) = onnx::Relu(%270), scope: PoseResNet/Sequential[hm_hp]/ReLU[1]
+  %272 : Float(1, 17, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%271, %hm_hp.2.weight, %hm_hp.2.bias), scope: PoseResNet/Sequential[hm_hp]/Conv2d[2]
+  %273 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %wh.0.weight, %wh.0.bias), scope: PoseResNet/Sequential[wh]/Conv2d[0]
+  %274 : Float(1, 64, 128, 128) = onnx::Relu(%273), scope: PoseResNet/Sequential[wh]/ReLU[1]
+  %275 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%274, %wh.2.weight, %wh.2.bias), scope: PoseResNet/Sequential[wh]/Conv2d[2]
+  %276 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %hps.0.weight, %hps.0.bias), scope: PoseResNet/Sequential[hps]/Conv2d[0]
+  %277 : Float(1, 64, 128, 128) = onnx::Relu(%276), scope: PoseResNet/Sequential[hps]/ReLU[1]
+  %278 : Float(1, 34, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%277, %hps.2.weight, %hps.2.bias), scope: PoseResNet/Sequential[hps]/Conv2d[2]
+  %279 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %hp_offset.0.weight, %hp_offset.0.bias), scope: PoseResNet/Sequential[hp_offset]/Conv2d[0]
+  %280 : Float(1, 64, 128, 128) = onnx::Relu(%279), scope: PoseResNet/Sequential[hp_offset]/ReLU[1]
+  %281 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%280, %hp_offset.2.weight, %hp_offset.2.bias), scope: PoseResNet/Sequential[hp_offset]/Conv2d[2]
+  %282 : Float(1, 64, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%266, %reg.0.weight, %reg.0.bias), scope: PoseResNet/Sequential[reg]/Conv2d[0]
+  %283 : Float(1, 64, 128, 128) = onnx::Relu(%282), scope: PoseResNet/Sequential[reg]/ReLU[1]
+  %284 : Float(1, 2, 128, 128) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[1, 1]](%283, %reg.2.weight, %reg.2.bias), scope: PoseResNet/Sequential[reg]/Conv2d[2]
+  return (%269, %272, %275, %278, %284, %281)
+
